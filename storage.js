@@ -313,7 +313,7 @@ export default class Storage {
     }));
   }
   clearMap() {
-    this.removeItem('map').then(() => {
+    return this.removeItem('map').then(() => {
       this._m = this._initMap();
     });
   }
